@@ -46,3 +46,19 @@
             padding: 8px;
             font-size: 16px;
         }
+        textarea {
+            margin-top: 5px;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #15df5f;
+            color: white;
+        }
