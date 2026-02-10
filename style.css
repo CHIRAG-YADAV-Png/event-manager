@@ -18,3 +18,31 @@
             width: 45%;
             background-color:rgb(237, 148, 148);
         }
+        .side2 {
+            border: 1px solid #050505a5;
+            border-radius: 15px;
+            padding: 20px;
+            width: 45%;
+            background-color:rgb(237, 148, 148);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input {
+            margin-top: 5px;
+            padding: 8px;
+            font-size: 16px;
+        }
+        select {
+            margin-top: 5px;
+            padding: 8px;
+            font-size: 16px;
+        }
