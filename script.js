@@ -50,4 +50,26 @@ if (events.length === 0) {
 
             listDiv.appendChild(eventDiv);
         });
-    }
+    } 
+
+    eventContainer.appendChild(listDiv);
+
+
+function clearEvents() {
+    events = [];
+    renderEvents();
+}
+function addSampleEvents() {
+    events.push(
+        {
+            title: "AI Seminar",
+            date: "2026-03-15",
+            category: "conference",
+            description: "Discussion on AI future."
+        }
+
+    );
+
+    renderEvents();
+}
+
