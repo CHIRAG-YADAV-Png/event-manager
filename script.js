@@ -16,6 +16,7 @@ function addEvent() {
     const category = document.getElementById("category").value;
     const description = document.getElementById("description").value.trim();
 
+
     if (!title || !date) {
         alert("Please fill Event Title and Date!");
         return;
@@ -33,3 +34,20 @@ function addEvent() {
 
     form.reset();
 }
+if (events.length === 0) {
+        listDiv.innerHTML = "<p>No events yet. Add your first event!</p>";
+    } else {
+        events.forEach((event, index) => {
+            const eventDiv = document.createElement("div");
+            eventDiv.classList.add("event-card");
+
+            eventDiv.innerHTML = `
+                <strong>${event.title}</strong><br>
+                <small>Date: ${event.date}</small><br>
+                <small>Category: ${event.category}</small><br>
+                <p>${event.description}</p>
+            `;
+
+            listDiv.appendChild(eventDiv);
+        });
+    }
