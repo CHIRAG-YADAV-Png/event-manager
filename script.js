@@ -26,4 +26,10 @@ function addEvent() {
         date,
         category,
         description
-    };
+    }; 
+    events.push(eventObj);
+
+    renderEvents();
+
+    form.reset();
+}
