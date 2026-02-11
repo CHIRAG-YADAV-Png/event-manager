@@ -1,3 +1,9 @@
+ body {
+    background-color:#EEF4F8;
+    margin: 0;
+    padding: 0;
+ }
+
  h1{
     text-align: center;
  }
@@ -16,14 +22,14 @@
             border-radius: 10px;
             padding: 20px;
             width: 45%;
-            background-color:rgb(237, 148, 148);
+            background-color: #D9E2EC;
         }
         .side2 {
             border: 1px solid #050505a5;
             border-radius: 15px;
             padding: 20px;
             width: 45%;
-            background-color:rgb(237, 148, 148);
+            background-color: #D9E2EC;
         }
 
         form {
@@ -59,14 +65,21 @@
             cursor: pointer;
         }
         button:hover {
-            background-color: #15df5f;
+            background-color:#7AA6C2;
             color: white;
+            border:white solid 2px;
         }
          .event-card {
-            border: 1px solid #9e3535;
+            border: 2px solid white;
             padding: 10px;
             margin-top: 10px;
             border-radius: 8px;
-            background-color: #993a3a;
+            background-color: #FFFFFF;
+            color: #000000;
+             transition: background-color 0.3s, color 0.3s, border 0.3s;
+        }
+        .event-card:hover{
+            background-color: #7AA6C2;
             color: white;
+            border:white solid 2px;
         }
