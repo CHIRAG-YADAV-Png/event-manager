@@ -62,3 +62,11 @@
             background-color: #15df5f;
             color: white;
         }
+         .event-card {
+            border: 1px solid #9e3535;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+            background-color: #993a3a;
+            color: white;
+        }

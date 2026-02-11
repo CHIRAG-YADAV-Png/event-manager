@@ -9,13 +9,11 @@ form.addEventListener("submit", function (event) {
     addEvent();
 });
 
-
 function addEvent() {
     const title = document.getElementById("event_title").value.trim();
     const date = document.getElementById("event_date").value;
     const category = document.getElementById("category").value;
     const description = document.getElementById("description").value.trim();
-
 
     if (!title || !date) {
         alert("Please fill Event Title and Date!");
@@ -27,14 +25,24 @@ function addEvent() {
         date,
         category,
         description
-    }; 
+    };
+
     events.push(eventObj);
 
     renderEvents();
 
     form.reset();
 }
-if (events.length === 0) {
+
+function renderEvents() {
+    
+    const oldList = document.getElementById("eventList");
+    if (oldList) oldList.remove();
+
+    const listDiv = document.createElement("div");
+    listDiv.id = "eventList";
+
+    if (events.length === 0) {
         listDiv.innerHTML = "<p>No events yet. Add your first event!</p>";
     } else {
         events.forEach((event, index) => {
@@ -50,15 +58,16 @@ if (events.length === 0) {
 
             listDiv.appendChild(eventDiv);
         });
-    } 
+    }
 
     eventContainer.appendChild(listDiv);
-
+}
 
 function clearEvents() {
     events = [];
     renderEvents();
 }
+
 function addSampleEvents() {
     events.push(
         {
@@ -72,4 +81,3 @@ function addSampleEvents() {
 
     renderEvents();
 }
-
